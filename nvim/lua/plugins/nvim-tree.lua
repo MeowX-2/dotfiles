@@ -6,7 +6,17 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
-    require("nvim-tree").setup {}
+    require("nvim-tree").setup {
+      update_cwd = true,
+  view = {
+    adaptive_size = true,
+    centralize_selection = true,
+  },
+  update_focused_file = {
+    enable = false,
+    update_cwd = false,
+  },
+    }
         vim.keymap.set('n', '<C-n>', ':NvimTreeOpen<CR>')
 
   end,
