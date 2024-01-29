@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-      ensure_installed = {"lua_ls", "clangd",   "texlab", "ltex" }
+      ensure_installed = {"lua_ls",    "texlab", "ltex" }
       })
     end
   },
@@ -18,7 +18,6 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
-      lspconfig.clangd.setup({})
       lspconfig.ltex.setup({})
       lspconfig.texlab.setup({})
 
